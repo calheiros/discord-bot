@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "app": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Jefferson Calheiros",
