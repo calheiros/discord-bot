@@ -1,6 +1,6 @@
 const curses = require('./curses.js')
 
-const clear = async (msg) => {
+const clearChat = async (msg) => {
     await msg.channel.bulkDelete(100).catch(console.error)
 }
 
@@ -13,15 +13,15 @@ const privateMsg = async (msg) => {
     dm.send('do you want me? :3')
 }
 
-const sad = (msg) => {
+const sadFace = (msg) => {
     msg.channel.send(':(')
 }
 
-const hello = (msg) => {
+const helloWorld = (msg) => {
     msg.channel.send('hello dear! I see you message')
 }
 
-const meme = (msg) => {
+const randomMeme = (msg) => {
     const memeUrl = 'https://i.pinimg.com/564x/a4/50/46/a450464948121fdbe151be9ddcf965e6.jpg'
     msg.channel.send({
         content: 'I found this:',
@@ -38,13 +38,14 @@ const fuck = (msg) => {
 }
 /*
  * export all avaible commands
-* */
+*/
+
 module.exports = {
-    clear,
+    clear: clearChat,
     'get-name': getName,
     private: privateMsg,
-    sad,
-    hello,
-    meme,
+    sad: sadFace,
+    hello: helloWorld,
+    meme: randomMeme,
     fuck
 }

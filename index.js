@@ -81,8 +81,9 @@ client.on(Events.MessageCreate, async (msg) => {
 })
 
 client.on(Events.GuildBanAdd, async (guild, user) => {
+    console.log('hello world')
     console.log(`events ban: ${Events.GuildBanAdd}`)
-    console.log(`user banned: ${user.username}`)
+    console.log(`user banned${user.username}`)
 })
 
 client.on('error', (error) => {
